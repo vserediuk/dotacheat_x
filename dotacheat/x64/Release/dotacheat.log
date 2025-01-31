@@ -1,0 +1,8 @@
+﻿  dllmain.cpp
+LINK : warning LNK4098: библиотека по умолчанию "LIBCMT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
+  Создание кода
+  1 of 46 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  dotacheat.vcxproj -> C:\Users\Vasyl\source\repos\dotacheat\x64\Release\dotacheat.dll

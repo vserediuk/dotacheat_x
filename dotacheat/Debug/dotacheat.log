@@ -1,0 +1,5 @@
+﻿  dllmain.cpp
+C:\Users\Vasyl\source\repos\dotacheat\dotacheat\dllmain.cpp(2,10): error C1083: Не удается открыть файл предкомпилированный заголовок: Debug\dotacheat.pch: No such file or directory,
+  pch.cpp
+C:\Users\Vasyl\source\repos\dotacheat\dotacheat\pch.cpp(3,10): error C1083: Не удается открыть файл предкомпилированный заголовок: Debug\dotacheat.pch: No such file or directory,
+  Создание кода...
