@@ -13,7 +13,6 @@ inline uintptr_t GetAbsoluteAddress(uintptr_t instruction_ptr, int offset, int s
     return instruction_ptr + *reinterpret_cast<int32_t*>(instruction_ptr + offset) + size;
 }
 
-
 class CInterfaceRegister
 {
 public:
@@ -32,14 +31,12 @@ CBaseEntity* __fastcall hkOnAddEntity(CGameEntitySystem* pThis, CBaseEntity* pEn
 	if (strstr(binaryName,"C_DOTA_BaseNPC_Hero"))
 	{
 		auto player = reinterpret_cast<CDotaBaseNPC*>(pEntity);
-        if (player != nullptr) {
+        	if (player != nullptr) {
 			auto isIllusion = player->IsIllusion();
-            auto a = "hui";
-        }
+        	}
 	}
     return oOnAddEntity(pThis, pEntity);
 }
-
 
 CBaseEntity* __fastcall hkOnRemoveEntity(CGameEntitySystem* pThis, CBaseEntity* pEntity)
 {
@@ -95,10 +92,10 @@ void install_hooks(HMODULE hModule) {
         return;
     }
 
-	if (MH_EnableHook(funcAdd) != MH_OK) {
-		return;
-	}
-
+    if (MH_EnableHook(funcAdd) != MH_OK) {
+	return;
+    }
+	
     if (MH_CreateHook(funcRem, &hkOnRemoveEntity, reinterpret_cast<LPVOID*>(&oOnRemoveEntity)) != MH_OK) {
         return;
     }
@@ -155,4 +152,3 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 
     return TRUE;
 }
-
